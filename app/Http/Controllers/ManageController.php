@@ -7,6 +7,7 @@ use App\Helpers\OneDrive;
 use Illuminate\Http\Request;
 use Illuminate\Contracts\Encryption\DecryptException;
 use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Validator;
 
 /**
@@ -164,14 +165,14 @@ class ManageController extends Controller
 
             return view(config('olaindex.theme').'message');
         }
-        $password = $request->get('password', '12345678');
+        $password = $request->get('password', '');
         $storeFilePath = trim($path, '/').'/.password';
         $remoteFilePath
             = Tool::getOriginPath($storeFilePath); // 远程password保存地址
         $response = OneDrive::uploadByPath($remoteFilePath, $password);
-        $response['errno'] === 0 ? Tool::showMessage('操作成功，请牢记密码！')
-            : Tool::showMessage('加密失败！', false);
-        Artisan::call('cache:clear');
+        $response['errno'] === 0 ? Tool::showMessage('操作成功！')
+            : Tool::showMessage('操作失败，请重试！', false);
+        Cache::forget('one:list:'.Tool::getAbsolutePath($path));
 
         return redirect()->back();
     }
@@ -201,7 +202,7 @@ class ManageController extends Controller
         $response = OneDrive::uploadByPath($remoteFilePath, $content);
         $response['errno'] === 0 ? Tool::showMessage('添加成功！')
             : Tool::showMessage('添加失败！', false);
-        Artisan::call('cache:clear');
+        Cache::forget('one:list:'.Tool::getAbsolutePath($path));
 
         return redirect()->route('home', Tool::getEncodeUrl($path));
     }
@@ -233,7 +234,6 @@ class ManageController extends Controller
         $response['errno'] === 0 ? Tool::showMessage('修改成功！')
             : Tool::showMessage('修改失败！', false);
         Artisan::call('cache:clear');
-
         return redirect()->back();
     }
 
@@ -257,7 +257,7 @@ class ManageController extends Controller
         $response = OneDrive::mkdirByPath($name, $graphPath);
         $response['errno'] === 0 ? Tool::showMessage('新建目录成功！')
             : Tool::showMessage('新建目录失败！', false);
-        Artisan::call('cache:clear');
+        Cache::forget('one:list:'.Tool::getAbsolutePath($path));
 
         return redirect()->back();
     }

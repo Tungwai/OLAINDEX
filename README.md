@@ -7,7 +7,7 @@
 [![GitHub forks](https://img.shields.io/github/forks/WangNingkai/OLAINDEX.svg?style=flat-square)](https://github.com/WangNingkai/OLAINDEX/network)
 [![GitHub license](https://img.shields.io/github/license/WangNingkai/OLAINDEX.svg?style=flat-square)](https://github.com/WangNingkai/OLAINDEX/blob/master/LICENSE)
 
-![OLAINDEX](https://i.loli.net/2018/10/11/5bbf40831f294.jpg)
+![OLAINDEX](https://i.loli.net/2018/12/20/5c1afb0e9a37b.jpg)
 
 此图来自 [如有乐享](https://51.ruyo.net/)，感谢推广
 
@@ -21,6 +21,10 @@
 
 - [https://github.com/WangNingkai/OLAINDEX](https://git.io/OLAINDEX)
 
+## 预览
+
+![预览](https://img02.sogoucdn.com/app/a/100520146/cd2311797c818d8f37bd5a7474080be4)
+ 
 ## 演示地址
 
 - [https://dev.ningkai.wang](https://dev.ningkai.wang)
@@ -89,7 +93,19 @@ chown -R www:www *
 
 **捐赠 ： [https://pay.ningkai.wang](https://pay.ningkai.wang)**
 
-## 作者
+## 问题反馈
+
+> 进行任何操作前请先阅读 [《提问的智慧》](https://github.com/ruby-china/How-To-Ask-Questions-The-Smart-Way/blob/master/README-zh_CN.md)
+
+当前获取帮助有三种方式：
+
+1. 通过 [GitHub issue](https://github.com/WangNingkai/OLAINDEX/issues) 提交问题（仅限问题反馈）
+2. 通过 [个人博客](https://imwnk.cn) 评论留言 或者 [关于&反馈](https://olaindex.ningkai.wang)  页面最下角留言
+3. 通过个人邮箱联系（每周不定时查看）
+
+无论采用哪种方式，请务必注意自己的言行举止，尊重他人，遵守最基本的社区行为规范。
+在求(伸)助(手)前请确保已经仔细 [Github Wiki](https://github.com/WangNingkai/OLAINDEX/wiki) 内的所有说明。
+使用 [GitHub issue](https://github.com/WangNingkai/OLAINDEX/issues) 提交问题时请确保提供信息完整准确，否则不予跟进。
 
 Blog : [https://imwnk.cn](https://imwnk.cn)
 
@@ -99,12 +115,8 @@ Email : [imwnk@live.com](mailto:imwnk@live.com)
 
 1. 本项目同样存在命令行版本，包含基本的显示下载，功能与此版本一致。项目地址 [OLAINDEX-CMD](https://git.io/OLACMD)
 
-2.本软件仅供日常学习使用，不得用于任何商业用途；学习使用请遵守您所在国家的法律，任何非法行为由使用者本身承担。
+2. 本软件仅供日常学习使用，不得用于任何商业用途；学习使用请遵守您所在国家的法律，任何非法行为由使用者本身承担。
 
-3.如使用本应用，请保留底部版权，并分享给更多人，谢谢。
+3. 如使用本应用，请保留底部版权，并分享给更多人，谢谢。
 
-
-## 预览
-
-![demo1.png](https://img02.sogoucdn.com/app/a/100520146/cd2311797c818d8f37bd5a7474080be4)
-![demo2.png](https://img03.sogoucdn.com/app/a/100520146/f5ba120d0c44e7d57c8ff076da20cb9f)
+---
